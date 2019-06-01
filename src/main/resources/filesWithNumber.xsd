@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://inc/myself/models"
+           targetNamespace="http://inc/myself/models"
+           elementFormDefault="qualified">
+
+    <xs:element name="filesWithNumberRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numberToSearch" type="xs:int" nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="filesWithNumberResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Result" type="tns:Result"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Result">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="fileNames" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="error" type="xs:string">
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

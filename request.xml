@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:request="http://inc/myself/models">
+<soapenv:Header/>
+<soapenv:Body>
+    <request:filesWithNumberRequest>
+        <request:numberToSearch>33</request:numberToSearch>
+    </request:filesWithNumberRequest>
+</soapenv:Body>
+</soapenv:Envelope>
